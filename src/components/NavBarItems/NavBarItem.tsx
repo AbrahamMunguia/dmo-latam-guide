@@ -1,6 +1,11 @@
 import React from "@astrojs/react";
 
-export function NavBarItem() {
+interface NavBarItemProps {
+  titulo: string;
+  enlace?: string;
+}
+
+export function NavBarItem({ titulo, enlace }: NavBarItemProps) {
   const cssClasses = {
     active:
       "block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white",
@@ -10,8 +15,12 @@ export function NavBarItem() {
 
   return (
     <li>
-      <a href="#" className={cssClasses.active} aria-current="page">
-        Inicio
+      <a
+        href={`./${enlace}`}
+        className={cssClasses.inactive}
+        aria-current="page"
+      >
+        {titulo}
       </a>
     </li>
   );
