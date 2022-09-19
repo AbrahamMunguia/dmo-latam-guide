@@ -1,8 +1,9 @@
 import React from "@astrojs/react";
 import { NavBarItem } from "./NavBarItem";
+const url = import.meta.env.BASE_URL;
 
 const menu = [
-  { enlace: "", titulo: "Inicio" },
+  { enlace: url, titulo: "Inicio" },
   { enlace: "guias", titulo: "Guias" },
   { enlace: "planificador", titulo: "Planificador" },
 ];

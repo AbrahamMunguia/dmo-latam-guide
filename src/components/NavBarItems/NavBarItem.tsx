@@ -15,11 +15,7 @@ export function NavBarItem({ titulo, enlace }: NavBarItemProps) {
 
   return (
     <li>
-      <a
-        href={`./${enlace}`}
-        className={cssClasses.inactive}
-        aria-current="page"
-      >
+      <a href={`${enlace}`} className={cssClasses.inactive} aria-current="page">
         {titulo}
       </a>
     </li>
