@@ -19,7 +19,8 @@ import NavBar from "@components/NavBar.astro";
   <body>
     <NavBar />
     <div class="wrapperLayout">
-      <div class="contentContainer"></div>
+      <div class="sidebarContainer">One</div>
+      <div class="contentContainer">Two</div>
     </div>
     <style>
       :root {
@@ -46,6 +47,10 @@ import NavBar from "@components/NavBar.astro";
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: minmax(100px, auto);
+      }
+      .sidebarContainer {
+        grid-column: 1/3;
+        grid-row: 1;
       }
       .contentContainer {
         grid-column: 2;
